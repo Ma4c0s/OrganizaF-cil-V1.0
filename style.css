@@ -1,0 +1,1146 @@
+/*INICIO DA TELA DE CADASTRO*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1b1b1b, #464646);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #353535;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 0.3s;
+  background: #1a1a1a;
+}
+
+.erro {
+  color: red;
+  font-size: 12px;
+}
+
+#mensagem {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sucesso {
+  color: green;
+}
+
+@media (max-width: 480px) {
+
+  form {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+}
+
+.senha-container {
+  position: relative;
+}
+
+.senha-container input {
+  padding-right: 40px;
+}
+
+#toggleSenha {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/*FIM DA TELA DE CADASTRO*/
+
+
+/*INICIO DAS DIVS DE ORGANIZAÇÃO*/
+
+.navTopo {
+  top: 100%;
+  width: 100%;
+}
+
+.divDeus {
+  height: 100%;
+  width: 100%;
+}
+
+.divAndar {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.divAndarEstatico {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 250px;
+}
+
+.divCard {
+  display: flex;
+  flex: 1;
+  height: 150px;
+  border-radius: 10px;
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.divCard:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.lugarImagem {
+  width: 40%;
+  height: 100%;
+
+  background-color: #2b2b2b;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+#imagemUpload {
+  display: none;
+}
+
+#previewImagem {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: none;
+}
+
+#textoImagem {
+  position: absolute;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+
+/* TITULO */
+
+.lugarTextoTitulo {
+  width: 100%;
+  height: 100%;
+}
+
+.lugarTextoTitulo textarea {
+  width: 100%;
+  height: 100%;
+
+  background-color: #353535;
+
+  border-radius: 12px;
+
+  border: none;
+  outline: none;
+
+  resize: none;
+
+  color: white;
+
+  padding: 20px;
+
+  font-size: 38px;
+
+  font-weight: bold;
+
+  margin-top: 15px;
+}
+
+
+/* TEXTO LATERAL */
+
+.lugarTexto {
+  width: 60%;
+  height: 100%;
+
+  background-color: #353535;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  overflow: hidden;
+}
+
+.lugarTexto textarea {
+  width: 100%;
+  height: 100%;
+
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  resize: none;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+
+/* CONTEÚDO */
+
+.lugarTexto2 {
+  margin-top: 15px;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #353535;
+
+  border-radius: 12px;
+
+  padding: 20px;
+}
+
+.lugarTexto2 textarea {
+  width: 100%;
+  height: 100%;
+
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  resize: none;
+
+  color: white;
+
+  font-size: 24px;
+}
+
+
+/* PREVIEW DOS CARDS */
+
+.imagemCard {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+
+.lugarTextoPreview {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.lugarTextoPreview p {
+
+  white-space: pre-wrap;
+
+  color: white;
+
+  font-size: 16px;
+
+  margin: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+/*INICIO DA TELAPRINCIPAL*/
+
+.cardFantasma {
+  display: flex;
+  flex: 1;
+  height: 150px;
+  border-radius: 10px;
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;  
+
+}
+
+.cardFantasma:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/*FIM DA TELAPRINCIPAL*/
+
+/*INICIO CARDCLICADO*/
+
+@media print {
+
+  .navbar{
+    display: none;
+  }
+
+  body{
+    background: white;
+  }
+
+  .divCard{
+    box-shadow: none;
+  }
+
+}
+
+@media print {
+
+  body{
+    background: white;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .divCard,
+  .lugarTexto,
+  .lugarTexto2,
+  .lugarTextoPreview,
+  .cardTextoCompleto{
+    overflow: visible !important;
+
+    height: auto !important;
+  }
+
+  .lugarTextoPreview p,
+  .cardTextoCompleto p{
+
+    display: block !important;
+
+    -webkit-line-clamp: unset !important;
+
+    -webkit-box-orient: unset !important;
+
+    overflow: visible !important;
+
+    white-space: pre-wrap;
+  }
+
+}
+
+/* ========================= */
+/* TELA PRINCIPAL */
+/* ========================= */
+
+.areaCards{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:20px;
+
+padding:20px;
+
+}
+
+
+.botaoCriar{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:150px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:70px;
+
+color:white;
+
+background:
+rgba(
+255,
+255,
+255,
+0.08
+);
+
+border:
+2px dashed
+rgba(
+255,
+255,
+255,
+0.2
+);
+
+transition:
+0.2s;
+
+}
+
+
+.botaoCriar:hover{
+
+transform:
+scale(1.05);
+
+background:
+rgba(
+255,
+255,
+255,
+0.15
+);
+
+}
+
+/*Context Menu*/
+
+.menu-oculto {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.menu-oculto ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.menu-oculto ul li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.menu-oculto ul li:hover {
+  background-color: #f1f1f1;
+}
+
+/* ========================= */
+/* CONTEXT MENU */
+/* ========================= */
+
+.contextMenu {
+    position: fixed;
+
+    display: none;
+
+    z-index: 9999;
+
+    background-color: #333;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    min-width: 180px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.4);
+}
+
+
+/* BOTÕES */
+
+.contextMenu button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    background-color: #333;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+/* HOVER */
+
+.contextMenu button:hover {
+
+    background-color: #444;
+
+}
+
+/* ========================= */
+/* CARD ARRASTADO */
+/* ========================= */
+
+.divCard {
+    cursor: grab;
+    user-select: none;
+}
+
+.divCard:active {
+    cursor: grabbing;
+}
+
+.cardArrastando {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+/* ========================= */
+/* CARDS */
+/* ========================= */
+
+.divCard {
+
+    cursor: grab;
+
+    user-select: none;
+
+    touch-action: none;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+
+}
+
+
+/* ========================= */
+/* SEGURANDO CARD */
+/* ========================= */
+
+.divCard:active {
+
+    cursor: grabbing;
+
+}
+
+
+/* ========================= */
+/* CARD SENDO ARRASTADO */
+/* ========================= */
+
+.cardArrastando {
+
+    opacity: 0.6;
+
+    transform:
+        scale(0.95);
+
+}
+
+
+/* ========================= */
+/* COR DOS COMPONENTES */
+/* ========================= */
+
+.divCard .lugarImagem,
+.divCard .lugarTexto,
+.divCard .lugarTextoPreview {
+
+    background-color:
+        inherit;
+
+}
+/* ========================= */
+/* COR PADRÃO DOS CARDS */
+/* ========================= */
+
+.divCard {
+
+    background-color: #333333;
+
+    cursor: grab;
+
+    user-select: none;
+
+    touch-action: none;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+
+}
+
+
+/* ========================= */
+/* BOTÕES DE CRIAÇÃO */
+/* ========================= */
+
+.containerBotoesCriar{
+
+  position: relative;
+
+  height: 150px;
+
+}
+
+
+/* ========================= */
+/* BOTÃO + */
+/* ========================= */
+
+.containerBotoesCriar
+.botaoCriar{
+
+  width: 100%;
+
+  height: 150px;
+
+}
+
+
+/* ========================= */
+/* BOTÃO PASTA */
+/* ========================= */
+
+.botaoPasta{
+
+  position: absolute;
+
+  right: 8px;
+
+  bottom: 8px;
+
+  width: 45px;
+
+  height: 45px;
+
+  padding: 0;
+
+  border-radius: 8px;
+
+  background-color:
+    rgba(255,255,255,0.15);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.25);
+
+  font-size: 24px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 10;
+
+}
+
+
+.botaoPasta:hover{
+
+  background-color:
+    rgba(255,255,255,0.25);
+
+  transform: scale(1.05);
+
+}
+
+
+/* ========================= */
+/* PASTA */
+/* ========================= */
+
+.pastaCard{
+
+  background-color:
+    #292929;
+
+}
+
+
+/* ========================= */
+/* ÍCONE DA PASTA */
+/* ========================= */
+
+.pastaImagem{
+
+  background-color:
+    #292929 !important;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+.iconePasta{
+
+  font-size: 55px;
+
+}
+
+
+/* ========================= */
+/* ÁREA DENTRO DA PASTA */
+/* ========================= */
+
+.areaDentroPasta{
+
+  background-color:
+    #171717;
+
+  min-height:
+    calc(100vh - 80px);
+
+  padding:
+    20px;
+
+}
+
+
+/* ========================= */
+/* CABEÇALHO DA PASTA */
+/* ========================= */
+
+.cabecalhoPasta{
+
+  grid-column:
+    1 / -1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 5px;
+
+}
+
+
+.cabecalhoPasta h2{
+
+  color: white;
+
+  margin: 0;
+
+  font-size: 24px;
+
+}
+
+
+/* ========================= */
+/* VOLTAR */
+/* ========================= */
+
+.botaoVoltarPasta{
+
+  width: 45px;
+
+  height: 45px;
+
+  padding: 0;
+
+  background-color:
+    #333;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 24px;
+
+}
+
+
+.botaoVoltarPasta:hover{
+
+  background-color:
+    #444;
+
+}
+
+
+/* ========================= */
+/* NAVEGAÇÃO ENTRE PÁGINAS */
+/* ========================= */
+
+.navegacaoPaginas {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    z-index: 1000;
+}
+
+.pontoPagina {
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background-color: #777;
+
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.pontoPagina:hover {
+    background-color: #777;
+    transform: scale(1.2);
+}
+
+.pontoPagina.ativo {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+
+
+
+/* ========================= */
+/* GRADE DE ANEXOS */
+/* ========================= */
+
+.areaAnexos {
+    width: 85%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+    padding: 20px;
+
+    min-height: 400px;
+    box-sizing: border-box;
+}
+
+.gradeAnexos {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, 130px);
+
+    justify-content: start;
+    align-content: start;
+
+    gap: 20px;
+
+    width: 100%;
+    min-height: 300px;
+}
+
+
+/* ========================= */
+/* BOTÃO ADICIONAR */
+/* ========================= */
+
+#anexosUpload {
+    display: none;
+}
+
+.botaoAnexar {
+    width: 130px;
+    height: 160px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #353535;
+    border: 2px dashed #777;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botaoAnexar span {
+    font-size: 55px;
+    color: white;
+    font-weight: 300;
+}
+
+.botaoAnexar:hover {
+    background-color: #454545;
+    border-color: white;
+}
+
+
+/* ========================= */
+/* ITENS DOS ARQUIVOS */
+/* ========================= */
+
+.itemAnexo {
+    width: 130px;
+    height: 160px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 8px;
+    padding: 10px;
+
+    background-color: #353535;
+    border-radius: 12px;
+
+    color: white;
+    text-align: center;
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* IMAGENS */
+
+.imagemAnexo {
+    display: block;
+
+    width: 100%;
+    height: 75px;
+
+    object-fit: cover;
+    border-radius: 6px;
+
+    flex-shrink: 0;
+}
+
+
+/* ÍCONES */
+
+.iconeAnexo {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+    flex-shrink: 0;
+}
+
+
+/* NOME DO ARQUIVO */
+
+.nomeAnexo {
+    display: block;
+
+    width: 100%;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    font-size: 12px;
+    line-height: 18px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    text-align: center;
+}
+
+
+/* BOTÃO BAIXAR */
+
+.itemAnexo button {
+    font-size: 11px;
+    padding: 2px 8px;
+    flex-shrink: 0;
+}
+
+
+/* ========================= */
+/* ARRASTAR ARQUIVOS */
+/* ========================= */
+
+.gradeAnexos.arrastando {
+    background-color: #ffffff10;
+    outline: 2px dashed white;
+    outline-offset: 10px;
+    border-radius: 12px;
+}
+
+
+
+/* ========================= */
+/* CORREÇÃO DO POSICIONAMENTO DA GRADE */
+/* ========================= */
+
+.areaAnexos {
+    display: block !important;
+
+    width: 85% !important;
+    max-width: 1100px;
+
+    margin: 40px auto !important;
+
+    text-align: left !important;
+    box-sizing: border-box;
+}
+
+.gradeAnexos {
+    display: grid !important;
+
+    width: 100% !important;
+
+    grid-template-columns: repeat(auto-fill, 130px) !important;
+
+    justify-content: start !important;
+    justify-items: start !important;
+    align-content: start !important;
+
+    gap: 20px;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Impede que os itens sejam centralizados */
+
+.itemAnexo,
+.botaoAnexar {
+    margin: 0 !important;
+    justify-self: start !important;
+}
+
+
+
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+
+    .navTopo,
+    .navegacaoPaginas {
+        display: none !important;
+    }
+
+    .divAndarEstatico,
+    .divAndar,
+    .lugarTexto2 {
+        display: none !important;
+    }
+
+    #paginaTextoImpressao {
+        display: block !important;
+        position: relative;
+        width: 100%;
+        min-height: 250mm;
+        padding: 10px;
+        color: black;
+        background: white;
+        break-before: page;
+        page-break-before: always;
+    }
+
+    #paginaTextoImpressao h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    #paginaTextoImpressao p {
+        font-size: 16px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+    }
+}
